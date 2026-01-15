@@ -1,4 +1,4 @@
-package com.example.jdbc;
+package com.example.javafxanwendung;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

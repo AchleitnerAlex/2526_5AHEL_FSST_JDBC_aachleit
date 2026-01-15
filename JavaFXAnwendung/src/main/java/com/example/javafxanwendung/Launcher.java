@@ -1,4 +1,4 @@
-package com.example.jdbc;
+package com.example.javafxanwendung;
 
 import javafx.application.Application;
 
