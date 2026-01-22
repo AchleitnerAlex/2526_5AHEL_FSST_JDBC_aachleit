@@ -4,20 +4,20 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.javafxanwendung.HelloController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxanwendung.HelloController">
    <children>
       <BarChart fx:id="bc_amountcity" title="Anzahl der Städte pro Land">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="Country" side="BOTTOM" />
         </xAxis>
         <yAxis>
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
+      <Slider fx:id="sl_amountOfCountry" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseReleased="#changedAmouCountry" prefHeight="79.0" prefWidth="600.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
    </children>
    <opaqueInsets>
       <Insets bottom="10.0" />
