@@ -11,7 +11,7 @@
    <children>
       <BarChart fx:id="bc_amountcity" title="Anzahl der Städte pro Land">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="Country" side="BOTTOM" />
         </xAxis>
         <yAxis>
           <NumberAxis side="LEFT" />

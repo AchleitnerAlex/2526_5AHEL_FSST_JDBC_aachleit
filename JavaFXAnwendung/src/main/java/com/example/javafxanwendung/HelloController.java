@@ -12,6 +12,7 @@ public class HelloController {
 
     public Slider sl_amountOfCountry;
     protected Connection conn;
+    protected ResultSet rs;
 
     public BarChart bc_amountcity;
 
@@ -29,8 +30,16 @@ public class HelloController {
 
     public void Initialize() throws SQLException {
         sl_amountOfCountry.adjustValue(1);
+        String sql;
+        Statement st = conn.createStatement();
+        sql = "SELECT name, COUNT(c.name) " +
+                "FROM country " +
+                "JOIN city c " +
+                "ON country.code = c.countrycode" +
+                "GROUB BY name" +
+                "ORDER BY COUNT(c.name) DESC ;";
 
-
+        rs = st.executeQuery(sql);
     }
 
     public void changedAmouCountry(MouseEvent mouseEvent) {
@@ -38,7 +47,14 @@ public class HelloController {
     }
 
     protected void chartupdate(int amoOfCountry) throws SQLException {
-        Statement st = conn.createStatement();
+
+
+
+        // TODO: SQL Abfrage einmal mit allen Daten in eine Collection
+        //   bei chartUpdate Zugriff auf die Collection und entsprechend filtern
+
+
+
 
 
     }
